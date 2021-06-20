@@ -20,6 +20,10 @@ void check_statistics_for_text(string text, vector<pair<string, int>> expeted_st
 
 }
 
+TEST(FrequencyCounter, EmptyText) {
+  check_statistics_for_text("", {});
+}
+
 TEST(FrequencyCounter, OneWord) {
   check_statistics_for_text("word", {{"word", 1}});
 }
